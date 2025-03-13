@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="study">
+        <title>Study</title>
+        <link rel="stylesheet" type="text/css" href="style.css"> <!-- 링크스타일 외부요소와 연동, 이와같은 사용을 권장함.-->
+        <style>
+            p{ /* p태그에 대한 스타일을 지정 임베딩스타일 */
+                color: red;
+            }
+            #p2{ /* id가 p2인 태그에 대한 스타일을 지정, 중복이불가능 */
+                color: green;
+            }
+            .t2{ /* 클래스가 t2인 태그에 대한 스타일을 지정, 중복이가능, 재사용측면에서 유리함 */
+                color: yellow;
+            }
+
+            section div{ /* section태그의 div태그에 대한 스타일을 지정 */
+                color: red;
+            }
+            section >div{ /* section태그의 h자식인 div태그에 대한 스타일을 지정 */
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <p style="color: blue;">테스트</p> <!-- 인라인스타일-->
+        <div class="t2">
+            <p id="p2">test2</p>
+        </div>
+        <section> <!--자식샐렉터 하위계층이 존재함.-->
+            <div>
+                <p>
+                    가나다라
+                </p>
+            </div>
+            <h>
+                <div>테스트2</div>
+            </h>
+            <p>마바사</p>
+        </section>
+    </body>
+</html>
