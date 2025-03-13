@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="study">
+        <title>Study</title>
+        <link rel="stylesheet" type="text/css" href="style.css"> <!-- 링크스타일 외부요소와 연동, 이와같은 사용을 권장함.-->
+        <style>
+            p + span{ /* p태그의 형제인 span태그에 대한 스타일을 지정 */
+                color: red;
+            }
+            p ~ span{ /* p태그 부터 모든 태그에 대한 스타일을 지정정 */
+                color: blue;
+            }
+
+            a :hover{ /*input 태그에 focus 시 backgroundcolor = green*/
+                color: red;
+            }
+            input :focus{
+                background-color: green;
+            }
+
+            p ::after{
+                content: "after"; /* p태그의 내용뒤에 after를 추가함 */
+            }
+
+        </style>
+    </head>
+    <body>
+        <section>
+            <p>p1</p>
+            <span>span1</span>
+            <div>div1</div>
+            <span>span2</span>
+        </section>
+        <div>
+            <a href="">버튼</a>
+            <input type="text">
+        </div>
+        <p class="p"></p>
+        <div id="div"></div>
+        <span></span>
+    </body>
+</html>
