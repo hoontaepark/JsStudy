@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="study">
+    <meta name="description" content="html,js_study">
+    <meta name="author" content="thpark">
+    <meta http-equiv="refresh" content="30"> <!-- 30초마다 새로고침 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study</title>
+    <link rel="stylesheet" type="text/css" href="style.css"> <!-- 외부 리소스와의 연계  -->
+    <script></script> <!-- js 태그-->
+</head> <!--모든 요소들이 담기는 태그-->
+<body>
+    <div>
+        <a href="study_02.html" target="_blank" rel="noopner noreferrer">study02로 이동</a> <!-- target="_blank"는 새창에서 열고, 보안취약점이 존재 -->
+    </div>
+    <div>
+        <img src="./study.html" alt="이미지가 없습니다."> <!-- 이미지태그, alt는 이미지가 없을때 대체텍스트  ./현재폴더 ../상위폴더--> 
+        <video src="./study.html" controls autoplay loop muted> <!-- 비디오태그, controls는 재생버튼, autoplay는 자동재생, loop는 반복재생, muted는 음소거 -->
+    </div>
+    <div>
+        <form action="" method="get"> <!-- mdn input 을 이용해 input 태그확인하기-->
+        <input type="text" name="id" value="아이디">
+        <input type="submit">
+        <input type="date">
+        </form>
+    </div>
+    <div> 
+        <label for="pw">패스워드</label> <!-- for속성으로 input태그에 접근이가능 pw로 패스워드에 접속이가능함.-->
+        <input type="password" id="pw">
+
+        <select name="" id=""> <!-- select태그는 드롭다운리스트를 만들어줌 value 를 값을 초기화한다. -->
+            <option value="">1</option>
+            <option value="">2</option>
+            <option value="">3</option>
+        </select>
+        <textarea name="" id="" cols="30" rows="10"></textarea> <!-- textarea는 여러줄의 텍스트를 입력할수있음. cols는 가로폭, rows는 세로폭 -->
+    </div>
+    <div>
+    <button type="button">버튼1</button>
+    <input type="button" value="버튼2">
+    </div>
+</body>
+</html>
