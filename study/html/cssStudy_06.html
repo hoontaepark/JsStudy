@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="study">
+        <title>Study</title>
+        <link rel="stylesheet" type="text/css" href="style.css"> <!-- 링크스타일 외부요소와 연동, 이와같은 사용을 권장함.-->
+    </head>
+        <style>
+          .div{
+            display: inline-block;
+            height: 100px;
+            width: 100px;
+            background : red;
+            margin: 5px;
+            opacity: 0.5; /*투명도 조절*/
+            
+
+          }
+          .span{
+            background: blue;
+            width: 100px;
+            height: 5px;
+            line-height: 30px; /*높이를 지정함, margin은 안먹히고, padding은 먹힘, width, height도 안먹힘*/
+          }
+        </style>
+   
+    <body>
+       <div class="div">
+         block
+       </div>
+       <div class="div">
+         block
+       </div>
+
+       <span class="span">
+         span
+       </span>
+       <span class="span">
+         span2
+       </span>
+
+
+    </body>
+</html>
