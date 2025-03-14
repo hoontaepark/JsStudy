@@ -20,8 +20,23 @@
                 background: blue;
 
             }
-            .grid-item:nth-child(1){ /*첫번째 자식요소에 대한 스타일을 지정.*/
+
+            .grid-item:nth-child(1){ 
+                grid-row-start: 2;
+                grid-row-end: 3;
                 background: red;
+
+            }
+            @media screen and (max-width: 300px) /*스크린의 너비가 200~300px이 아닐때 적용*/
+                and (min-width: 200px) 
+            {
+
+                .media{
+                    width: 300px;
+
+                    background: green;
+                }
+               
             }
 
         </style>
@@ -37,6 +52,9 @@
             <div class="griditem">7</div>
             <div class="griditem">8</div>
             <div class="griditem">9</div>
+        </div>
+        <div class="media">
+            미디어쿼리
         </div>
     </body>
 </html>
