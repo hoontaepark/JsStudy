@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="study">
+        <title>Study</title>
+        <link rel="stylesheet" type="text/css" href="style.css"> <!-- 링크스타일 외부요소와 연동, 이와같은 사용을 권장함.-->
+    </head>
+        <style>
+            .container{    /*flex사용시, div수직정렬을 수평정렬이 가능해짐*/
+                display: flex;
+                border: 3px solid black;
+                height: 60px;
+                flex-direction: row; /*수평정렬*/
+                flex-direction: column; /*수직정렬*/
+                flex-wrap: nowrap; /*한행에 배치, wrap은 줄을바꿈.*/
+                overflow: auto; /*넘치는 부분을 스크롤로 표시*/
+                justify-content: center; /*컨테이너들을 수평으로 정렬함.*/
+                align-items: center; /*컨테이너들을 수직으로 정렬함 중앙으로 가게해서 정렬.*/
+            }
+            .item{
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                background-color: blue;
+                margin: 5px;
+            }
+            .item2{
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                background-color: red;
+                margin: 5px;
+            }
+            .itme3{
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                background-color: green;
+                flex-shrink: 1; /*flex요소의 크기를 줄일수있는지 여부를 지정함.*/
+                margin: 5px;
+            }
+  
+        </style>
+   
+    <body>
+
+        <div class='container'>
+            <div class='item1'>item1</div>
+            <div class='item2'>item2</div>
+            <div class='item3'>item3</div>
+        </div>
+
+    </body>
+</html>
