@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="study">
+        <title>Study</title>
+        <link rel="stylesheet" type="text/css" href="style.css"> <!-- 링크스타일 외부요소와 연동, 이와같은 사용을 권장함.-->
+    </head>
+        <style>
+            div{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                transition-property: width, height;
+                transition-duration: 2s, 2s;
+                transition-timing-function: ease-in;
+                transition-delay: 1s;
+            }
+            div:hover{
+                width: 200px;
+                transition: all 2s; /*hover 시 div에 대해 2초동안 변화를 줌*/
+            }
+            #background{
+                background-color: yellowgreen;
+                width: 100px;
+                height: 100px;
+                background-image: url("https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png");
+                background-repeat: no-repeat;
+                background-size: 100px 100px;
+                background-size: contain;
+
+            }
+            .box{
+                width: 100px;
+                height: 100px;
+                color: blue;
+                line-height: 100px;
+                text-align: center;
+            }
+            .originlal{
+                background-color: gray;
+                margin: 40px;
+            }
+            .child{
+                background-color: red;
+            }
+            .translate{
+                transform: translate(10px, 50px);
+            }
+            .translate:hover{
+                transition: transfrom 1s linear;
+                transform: translate(0px, 0px);
+            }
+            .static{
+                width: 100px;
+                height: 100px;
+                background-color : red;
+                color: white;
+                line-height: 100px;
+                text-align: center;
+                z-index: 0;
+                top: 10px;
+                position: relative; 
+            }
+            .position{
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+                color: white;
+                line-height: 100px;
+                text-align: center;
+                position: absolute;
+                top: 10px;
+                left: 50px;
+                position: fixed;
+            }
+        </style>
+   
+    <body>
+       <div>transition practice</div>
+       <div id="background">backgroundcolor</div>
+
+       <div class="original box">
+            <div class="child box translate">translate</div>
+       </div>
+
+       <div class="static">
+         <div style= >
+            <div class="position">
+                position
+            </div>
+         </div>
+       </div>
+    </body>
+</html>
