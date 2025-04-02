@@ -26,10 +26,11 @@ body.addEventListener('click', function(){
     console.log('button')
 })
 
-const div2 = document.querySelector('.button2')
+const div2 = document.querySelector('div2')
 div2.addEventListener('click',function(e){
-    console.log(this)
+    console.log(this === e.currentTarget) //currentTarget는 이벤트에 바인딩된 요소를 가르킴. 
 })
+
 
 
 

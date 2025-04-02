@@ -67,3 +67,7 @@ console.log(result3);
 const result4 = arr5.filter(item => item > 5);
 console.log(result4);
 
+// map = 배열의 요소를 하나씩 꺼내서 함수를 실행하고 새로운 배열을 만듬.
+const result5 = arr5.map(item => item * 2);
+console.log(result5);
+

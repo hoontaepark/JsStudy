@@ -26,7 +26,7 @@ cal();
 // 전역으로 a를선언해서 출력이됨 
 console.log(a);  //함수 내부에서 선언한건 함수내부에서만 선언가능, RefreneceError 가 발생 
 
-//블록scope
+//블록scope, 선언된 블록내에서만 접근이가능함.
 let k = 20;
 {
     let b = 30;
@@ -35,13 +35,33 @@ let k = 20;
 }
 
 // 함수의 우선순위
-// let 은 중복으로 선언이 불가능하지만, 함수안에서는 가능함.
+// let 은 중복으로 선언이 불가능하지만, 재선언 불가능 함수안에서는 가능함, let은 블록밖에서도 선언이가능함.
 
-let c = 10;
+var c = 10;
 
 function cal(){
-    let a = 2;
-    console.log(a)
+    var c = 2; //var은 재선언이 가능하다. 함수스코프임.
+    console.log(c);
 }
 
 cal(); //a의 값은 2로 바뀌고 2가 출력된다. 
+
+// 함수호이스팅
+// 할당이 아닌 선언문을 끌어올림.
+
+cal(); //호이스팅, 함수를 먼저 선언하고 호출은 나중에한다. 선언을 최우선으로 함.
+function cal(){ 
+    console.log('계산');
+}
+
+//함수표현식은 호이스팅이 되지않음.
+cal();  //호이스팅이 되지않아서 호출이안됨. 
+var cal = function(){
+    console.log('계산');
+}
+
+function cal(a,b){
+    return a+b;
+}
+
+console.log(cal(1,2));
